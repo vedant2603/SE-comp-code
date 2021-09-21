@@ -67,20 +67,7 @@ void translation(int n,float c[][3],float tx,float ty)
 	//getch();
 }
 
-void scaling(int n,float c[][3],float sx,float sy)
-{
-	float b[10][3], a[10][3];
-	int i=0,j;
-	for(i=0;i<3;i++)
-		for(j=0;j<3;j++)
-			b[i][j]=0;
-	b[0][0]=sx;
-	b[1][1]=sy;
-	b[2][2]=1;
-	mult(n,b,c,a);
-	setcolor(YELLOW);
-	display(n,a);
-}
+
 void rotation(int n,float c[][3], float ra)
 {
 	int i=0,j;
@@ -136,14 +123,7 @@ int main()
 					//getch();
 					break;
 
-			case 2: cout<<"\nEnter the scaling factors sx and sy:";
-					cin>>sx>>sy;
-					cleardevice();
-					setcolor(CYAN);
-					display(n,c);
-					scaling(n,c,sx,sy);
-					break;
-
+				
 			case 3: cout<<"\nEnter the angle for rotation: ";
 					cin>>ra;
 					cleardevice();
