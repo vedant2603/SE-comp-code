@@ -22,11 +22,10 @@ int lineClip :: getcode(int x,int y) {
 		code |= TOP;
 	if(y<yl)			
 		code |= BOTTOM;
-	if(x<xl)
-		code |= LEFT;
+	
 	if(x>xh)
 		code |= RIGHT;
-	return code;
+	
 }
 
 
