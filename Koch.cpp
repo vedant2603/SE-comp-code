@@ -32,7 +32,20 @@ void koch(int x1,int y1,int x2,int y2,int it)
 	int x=x3 + ((x4-x3)*cos(angle)) + ((y4-y3)*sin(angle));
 	int y=y3 - ((x4-x3)*sin(angle)) + ((y4-y3)*cos(angle));
 
-	
+if(it>0)
+	{
+		koch(x1,y1,x3,y3,it-1);
+		koch(x3,y3,x,y,it-1);
+		koch(x,y,x4,y4,it-1);
+		koch(x4,y4,x2,y2,it-1);
+	}
+	else
+	{
+		line(x1,y1,x3,y3);
+		line(x3,y3,x,y);
+		line(x,y,x4,y4);
+		line(x4,y4,x2,y2);
+	}	
 
 }
 
