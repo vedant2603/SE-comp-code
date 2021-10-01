@@ -40,8 +40,20 @@ class transform
 	}
 };
 
-
-
+void transform::multiply(float b[20][20])
+{
+    for(int i=0;i<m;i++)
+    {
+        for(int j=0;j<m;j++)
+        {
+            c[i][j]=0;
+            for(int k=0;k<m;k++)
+            {
+                c[i][j]=c[i][j]+(a[i][k]*b[k][j]);
+            }
+        }
+    }
+}
 
 void transform::object()
 {
@@ -108,8 +120,7 @@ int main()
               "\n3.Rotation";
               cin>>ch;
 
-        switch(ch)
-        {
+        switch(ch){
         case 1:cout<<"\nTANSLATION OPERATION\n";
                cout<<"Enter value for tx and ty:";
                cin>>tx>>ty;
