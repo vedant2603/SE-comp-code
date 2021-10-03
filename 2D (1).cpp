@@ -34,6 +34,20 @@ void display(int n, float c[][3])
 	line(maxx,0,maxx,maxy*2);
 	setcolor(WHITE);
 }
+void scaling(int n,float c[][3],float sx,float sy)
+{
+	float b[10][3], a[10][3];
+	int i=0,j;
+	for(i=0;i<3;i++)
+		for(j=0;j<3;j++)
+			b[i][j]=0;
+	b[0][0]=sx;
+	b[1][1]=sy;
+	b[2][2]=1;
+	mult(n,b,c,a);
+	setcolor(YELLOW);
+	display(n,a);
+}
 
 void mult(int n,float b[][3], float c[][3],float a[][3])
 {
