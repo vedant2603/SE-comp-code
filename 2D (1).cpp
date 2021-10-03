@@ -122,6 +122,13 @@ int main()
 					translation(n,c,tx,ty);
 					//getch();
 					break;
+			case 2: cout<<"\nEnter the scaling factors sx and sy:";
+					cin>>sx>>sy;
+					cleardevice();
+					setcolor(CYAN);
+					display(n,c);
+					scaling(n,c,sx,sy);
+					break;
 
 				
 			case 3: cout<<"\nEnter the angle for rotation: ";
